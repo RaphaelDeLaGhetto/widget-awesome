@@ -25,10 +25,16 @@ module.exports = React.createClass({
    * Render the component
    */
   render: function () {
+    var message = 'Like'
+    var icon = 'glyphicon glyphicon-heart-empty'
+    if (this.state.liked) {
+      message = 'You like this!'
+      icon = 'glyphicon glyphicon-heart'
+    }
     return (
-      <span ref='likeButton' className='LikeButton' onClick={this.handleClick}>
-        Like
-      </span>
+      <button ref='likeButton' className='btn btn-default' onClick={this.handleClick}>
+        {message} <span className={icon} />
+      </button>
     )
   }
 })
