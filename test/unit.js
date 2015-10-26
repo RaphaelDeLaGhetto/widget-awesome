@@ -13,4 +13,15 @@ describe('LikeButton', function () {
     var likeButton = TestUtils.renderIntoDocument(<LikeButton />)
     expect(likeButton.state.liked).toBe(false)
   })
+
+  /**
+   * handleClick
+   */
+  it('should set the liked state to true after clicking', function () {
+    var likeButton = TestUtils.renderIntoDocument(<LikeButton />)
+    expect(likeButton.state.liked).toBe(false)
+
+    TestUtils.Simulate.click(likeButton.refs.likeButton)
+    expect(likeButton.state.liked).toBe(true)
+  })
 })

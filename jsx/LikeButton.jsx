@@ -13,13 +13,22 @@ module.exports = React.createClass({
   },
 
   /**
+   * handleClick
+   */
+  handleClick: function () {
+    this.setState({
+      liked: true
+    })
+  },
+
+  /**
    * Render the component
    */
   render: function () {
     return (
-      <div className='LikeButton'>
+      <span ref='likeButton' className='LikeButton' onClick={this.handleClick}>
         Like
-      </div>
+      </span>
     )
   }
 })
