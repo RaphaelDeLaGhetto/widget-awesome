@@ -32,7 +32,7 @@ module.exports = React.createClass({
       icon = 'glyphicon glyphicon-heart'
     }
     return (
-      <button ref='likeButton' className='btn btn-default' onClick={this.handleClick}>
+      <button ref='likeButton' className='btn btn-default btn-like' onClick={this.handleClick}>
         {message} <span className={icon} />
       </button>
     )
