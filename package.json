@@ -5,6 +5,7 @@
   "main": "lib/server.js",
   "dependencies": {
     "boom": "^2.6.1",
+    "bootstrap": "^3.3.5",
     "camel-case": "^1.0.2",
     "config": "~1.10.0",
     "hapi": "^8.8.1",
@@ -69,6 +70,11 @@
     "testDirectoryName": "test"
   },
   "standard": {
-    "globals": ["jest", "describe", "it", "expect"]
+    "globals": [
+      "jest",
+      "describe",
+      "it",
+      "expect"
+    ]
   }
 }
