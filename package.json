@@ -67,5 +67,8 @@
       "<rootDir>/node_modules/fbjs"
     ],
     "testDirectoryName": "test"
+  },
+  "standard": {
+    "globals": ["jest", "describe", "it", "expect"]
   }
 }
