@@ -24,4 +24,17 @@ describe('LikeButton', function () {
     TestUtils.Simulate.click(likeButton.refs.likeButton)
     expect(likeButton.state.liked).toBe(true)
   })
+
+  it('should not change liked state on subsequent clicks', function () {
+    var likeButton = TestUtils.renderIntoDocument(<LikeButton />)
+    expect(likeButton.state.liked).toBe(false)
+
+    // Click once
+    TestUtils.Simulate.click(likeButton.refs.likeButton)
+    expect(likeButton.state.liked).toBe(true)
+
+    // Click again
+    TestUtils.Simulate.click(likeButton.refs.likeButton)
+    expect(likeButton.state.liked).toBe(true)
+  })
 })
