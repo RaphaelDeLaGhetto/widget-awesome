@@ -25,10 +25,10 @@ module.exports = React.createClass({
    * Render the component
    */
   render: function () {
-    var message = 'Like'
+    var message = 'Like?'
     var icon = 'glyphicon glyphicon-heart-empty'
     if (this.state.liked) {
-      message = 'You like this!'
+      message = 'You like!'
       icon = 'glyphicon glyphicon-heart'
     }
     return (

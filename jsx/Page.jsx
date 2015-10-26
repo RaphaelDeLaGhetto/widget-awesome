@@ -5,7 +5,7 @@ var LikeButton = require('./LikeButton.jsx')
 module.exports = React.createClass({
   'displayName': 'BlankPage.jsx',
   render: function () {
-    var title = 'Do you like puppies?'
+    var title = 'Puppies?'
 
     var header = <Header title={title} />
     return (
