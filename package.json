@@ -26,8 +26,6 @@
     "less": "^2.2.0",
     "reactify": "^0.17.1",
     "standard": "^4.5.4",
-    "tap": "^0.4.12",
-    "tape": "^2.14.0",
     "uglify-js": "^2.4.16",
     "watch": "^0.13.0",
     "watch-less": "0.0.3",
@@ -39,7 +37,7 @@
     ]
   },
   "scripts": {
-    "test": "standard && tap test/*.js",
+    "test": "standard && jest",
     "start": "node bin/cli",
     "build-js": "browserify -e --standalone widget-awesome ./lib/browser.js | uglifyjs - > static/bundle.js",
     "build-css": "lessc src/style/widget.less > static/bundle.css",
@@ -58,5 +56,15 @@
   "homepage": "http://gitlab.rmcloud.com/npm-modules/widget-awesome",
   "publishConfig": {
     "registry": "http://npm.rmcloud.com:8123"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ],
+    "testDirectoryName": "test"
   }
 }
