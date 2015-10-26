@@ -7,8 +7,10 @@ module.exports = React.createClass({
     var title = 'This page is under construction'
 
     var header = <Header title={title} />
-    return <div className='Page'>
-      {header}
-    </div>
+    return (
+      <div className='Page'>
+        {header}
+      </div>
+    )
   }
 })
